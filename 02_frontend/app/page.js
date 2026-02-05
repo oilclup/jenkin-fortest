@@ -28,7 +28,7 @@ export default function Page() {
   if (loading) {
     return (
       <main className="container">
-        <div className="empty">Loading...</div>
+        <div className="empty">Loading.....</div>
       </main>
     );
   }
