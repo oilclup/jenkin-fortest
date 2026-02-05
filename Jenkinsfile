@@ -55,8 +55,8 @@ pipeline {
 
                     // Load credentials from Jenkins (masked)
                     withCredentials([
-                        string(credentialsId: 'MYSQL_ROOT_PASSWORD', variable: 'MYSQL_ROOT_PASS'),
-                        string(credentialsId: 'MYSQL_PASSWORD',      variable: 'MYSQL_PASS')
+                        // string(credentialsId: 'MYSQL_ROOT_PASSWORD', variable: 'MYSQL_ROOT_PASS'),
+                        // string(credentialsId: 'MYSQL_PASSWORD',      variable: 'MYSQL_PASS')
                     ]) {
                         // Safely write .env without using `sh` interpolation
                         writeFile file: '.env', text: """\
