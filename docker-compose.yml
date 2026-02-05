@@ -9,7 +9,6 @@ services:
       TZ: Asia/Bangkok
     ports:
       - "${API_PORT:-3001}:3001"
-    depends_on: [mysql]
     networks: [stack]
 
   frontend:
