@@ -6,11 +6,6 @@ services:
     environment:
       NODE_ENV: production
       PORT: ${API_PORT}
-      DB_HOST: mysql
-      DB_PORT: ${DB_PORT}
-      DB_NAME: ${MYSQL_DATABASE}
-      DB_USER: ${MYSQL_USER}
-      DB_PASSWORD: ${MYSQL_PASSWORD}
       TZ: Asia/Bangkok
     ports:
       - "${API_PORT:-3001}:3001"
