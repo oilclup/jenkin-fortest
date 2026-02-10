@@ -2,11 +2,13 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 
+# รับ build argument
 ARG NEXT_PUBLIC_API_HOST
-ENV NEXT_PUBLIC_API_HOST=$NEXT_PUBLIC_API_HOST
+# ตั้งเป็น environment variable เพื่อให้ Next.js อ่านได้ตอน build
+ENV NEXT_PUBLIC_API_HOST=${NEXT_PUBLIC_API_HOST}
 
 COPY package*.json ./
-RUN npm install  # เปลี่ยนจาก npm ci
+RUN npm install  
 COPY . .
 RUN npm run build
 
