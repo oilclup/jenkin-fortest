@@ -65,6 +65,7 @@ DB_PORT=3306
 FRONTEND_PORT=3000
 NODE_ENV=production
 API_HOST=${params.API_HOST}
+NEXT_PUBLIC_API_HOST=${params.API_HOST}
 """.stripIndent()
 
                         // Avoid printing secrets
