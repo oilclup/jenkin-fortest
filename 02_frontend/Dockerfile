@@ -1,6 +1,10 @@
 # Build stage
 FROM node:20-alpine AS builder
 WORKDIR /app
+
+ARG NEXT_PUBLIC_API_HOST
+ENV NEXT_PUBLIC_API_HOST=$NEXT_PUBLIC_API_HOST
+
 COPY package*.json ./
 RUN npm install  # เปลี่ยนจาก npm ci
 COPY . .
