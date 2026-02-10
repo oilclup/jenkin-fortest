@@ -52,6 +52,7 @@ pipeline {
             steps {
                 script {
                     echo "Preparing environment configuration..."
+                    echo "API_HOST parameter: ${params.API_HOST}"
 
                     // Load credentials from Jenkins (masked)
                     withCredentials([
